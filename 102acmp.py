@@ -1,0 +1,15 @@
+f=open("INPUT.TXT", "r")
+x1, y1=map(int, f.readline().split())
+x2, y2=map(int, f.readline().split())
+x3, y3=map(int, f.readline().split())
+x, y=map(int, f.readline().split())
+f.close()
+a=(x1-x)*(y2-y1)-(x2-x1)*(y1-y)
+b=(x2-x)*(y3-y2)-(x3-x2)*(y2-y)
+c=(x3-x)*(y1-y3)-(x1-x3)*(y3-y)
+f2=open("OUTPUT.TXT", "w")
+if ((a>=0 and b>=0 and c>=0) or (a<=0 and b<=0 and c<=0)):
+	f2.write("In")
+else:
+	f2.write("Out")
+f2.close()
